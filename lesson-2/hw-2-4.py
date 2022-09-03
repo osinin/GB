@@ -3,5 +3,5 @@
 # Если в слово длинное, выводить только первые 10 букв в слове.
 
 user_text = input('Enter your text divided by spaces: ')
-for el, word in enumerate(user_text.split()):
-    print(el+1, word[:10])
+for el, word in enumerate(user_text.split(), 1):
+    print(el, word[:10])
