@@ -15,7 +15,7 @@ while True:
 def stepen(n_1, n_2):
     n = 1
     devisor = n_1
-    while n <  n_2:
+    while n < n_2:
         devisor = devisor * n_1
         n += 1
         print(n, devisor)

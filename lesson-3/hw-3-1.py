@@ -3,12 +3,14 @@
 
 def division(divident, devisor):
     try:
-        quotient = divident / devisor
+        quotient = int(divident) / int(devisor)
         return quotient
     except ZeroDivisionError:
-        print("Devision by Zero!")
+        return "Devision by Zero!"
+    except ValueError:
+        return "Value Error!"
 
 
-divident = int(input('Enter divident: '))
-devisor = int(input('Enter devisor: '))
+divident = input('Enter divident: ')
+devisor = input('Enter devisor: ')
 print(division(divident, devisor))
