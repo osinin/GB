@@ -15,4 +15,4 @@ with open("hw_5_5.txt", "w+", encoding="UTF-8") as f:
     print(numbers)
     for num in numbers:
         sum += int(num)
-    print(sum)
+print(sum)
