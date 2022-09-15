@@ -7,11 +7,12 @@
 Физкультура: — 30(пр) —
 Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
+import re
+
 
 with open("hw_5_6.txt", "r", encoding="UTF-8") as f:
     lessons = f.readlines()
-    for i in lessons:
-        #my_dict = {i.split()[0].replace(":", ""): el * 2 for el in range(10, 15)}
-        print(i.split()[0])
-        print(i.split()[2])
-    print(lessons)
+    my_dict = {i.split(":")[0]: sum(list(map(int, re.findall(r'\d+', i.split()[1]))) +
+                                list(map(int, re.findall(r'\d+', i.split()[2]))) +
+                                list(map(int, re.findall(r'\d+', i.split()[3])))) for i in lessons}
+    print(my_dict)

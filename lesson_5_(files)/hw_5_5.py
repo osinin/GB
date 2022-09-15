@@ -6,7 +6,7 @@ from random import randint
 
 
 sum = 0
-orig_list = [randint(0, 1000) for _ in range(1, randint(2, 10))]
+orig_list = [randint(1, 1000) for _ in range(1, randint(2, 10))]
 orig_str = ' '.join(str(i) for i in orig_list)
 with open("hw_5_5.txt", "w+", encoding="UTF-8") as f:
     f.write(orig_str)
